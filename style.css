@@ -100,30 +100,3 @@ body {
 }
 
 
-/* Media query for mobile devices */
-@media (max-width: 500px) {
-    body {
-        background-size: cover;
-        background-position: center; /* Shifts the background image to the left */
-    }
-    .card {
-        width: 90%; /* Adjusted width for mobile devices */
-    }
-
-    .container h1 {
-        font-size: 24px; /* Adjusted font-size for mobile devices */
-    }
-
-    .display img {
-        width: 20px; /* Adjusted width for mobile devices */
-    }
-
-    .display input {
-        font-size: 16px; /* Adjusted font-size for mobile devices */
-    }
-
-    .container button {
-        font-size: 18px; /* Adjusted font-size for mobile devices */
-        padding: 10px 16px; /* Adjusted padding for mobile devices */
-    }
-}
