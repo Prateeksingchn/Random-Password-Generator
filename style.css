@@ -1,0 +1,130 @@
+/* Add these styles to your existing CSS file */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "sans-serif";
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(Screenshot\ \(55\).png);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.card {
+    background-color: #1a1a1a59; 
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%; 
+    max-width: 400px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 15%;
+}
+
+.container {
+    width: 100%;
+}
+
+.display {
+    width: 100%;
+    margin-top: 30px; 
+    margin-bottom: 20px; 
+    background-color: #fff;
+    color: #333;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+    border-radius: 5px;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 30px; 
+    margin-bottom: 10px; 
+}
+
+.container h1 span {
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+    padding-bottom: 5px; 
+}
+
+.display img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.display input {
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+.container button img {
+    width: 20px; 
+    margin-right: 8px; 
+}
+
+.container button {
+    border: 0;
+    outline: 0;
+    background: #1c3454; 
+    color: #fff;
+    /* color: black; */
+    font-size: 20px; 
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px; 
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.container button:hover {
+    background: #1152a2; 
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 500px) {
+    body {
+        background-image: url(/mobile\ bg.png);
+        background-size: cover;
+        background-position: center; /* Shifts the background image to the left */
+    }
+    .card {
+        width: 90%; /* Adjusted width for mobile devices */
+    }
+
+    .container h1 {
+        font-size: 24px; /* Adjusted font-size for mobile devices */
+    }
+
+    .display img {
+        width: 20px; /* Adjusted width for mobile devices */
+    }
+
+    .display input {
+        font-size: 16px; /* Adjusted font-size for mobile devices */
+    }
+
+    .container button {
+        font-size: 18px; /* Adjusted font-size for mobile devices */
+        padding: 10px 16px; /* Adjusted padding for mobile devices */
+    }
+}
