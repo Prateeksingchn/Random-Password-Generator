@@ -103,7 +103,6 @@ body {
 /* Media query for mobile devices */
 @media (max-width: 500px) {
     body {
-        background-image: url(/mobile\ bg.png);
         background-size: cover;
         background-position: center; /* Shifts the background image to the left */
     }
