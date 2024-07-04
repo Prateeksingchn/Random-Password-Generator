@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
+    <title>Secure Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="card">
         <div class="container">
-            <h1>Generate a <br><span> Random Password</span></h1>
-            <div class="display">
-                <input type="text" id="Password" placeholder="Password">
-                <img src="copy.png" onclick="copyPassword()">
+            <h1>Secure Password <span>Generator</span></h1>
+            <div class="password-display">
+                <input type="text" id="password" placeholder="Your secure password" readonly>
+                <button id="copyBtn" aria-label="Copy password">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </button>
             </div>
-            <button onclick="createPassword()" class="generate-btn"><img src="generate.png" alt="">Generate
-                Password</button>
+            <div class="options">
+                <div class="option-group">
+                    <label for="length">Password Length: <span id="lengthValue">16</span></label>
+                    <div class="slider-container">
+                        <input type="range" id="length" min="8" max="32" value="16">
+                    </div>
+                </div>
+                <div class="toggle-group">
+                    <div class="toggle-option">
+                        <label for="uppercase">Uppercase</label>
+                        <label class="switch">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-option">
+                        <label for="lowercase">Lowercase</label>
+                        <label class="switch">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-option">
+                        <label for="numbers">Numbers</label>
+                        <label class="switch">
+                            <input type="checkbox" id="numbers" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="toggle-option">
+                        <label for="symbols">Symbols</label>
+                        <label class="switch">
+                            <input type="checkbox" id="symbols" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button id="generateBtn" class="generate-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5H8V9H6V3H22V21H6V15H8V19H20V5Z"></path><path d="M13 8L17 12L13 16"></path><path d="M2 12H17"></path></svg>
+                Generate Password
+            </button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
-
 </html>
